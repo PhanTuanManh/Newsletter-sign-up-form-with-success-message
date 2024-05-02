@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="./script.js"></script>
+
+
+</head>
+
+<body>
+  <main class="wrapper">
+    <!-- Sign-up form start -->
+    <section id="card" class="card">
+      <div class="card__img-group">
+        <picture>
+          <source media="(min-width: 52.5rem)" srcset="./assets/images/illustration-sign-up-desktop.svg">
+          <img src="./assets/images/illustration-sign-up-mobile.svg" alt="" class="card__img">
+        </picture>
+      </div>
+      <div class="card__text-group">
+        <div class="card__label-group">
+          <h1 class="card__label-title">
+            Stay updated!
+          </h1>
+          <p class="card__label-des">Join 60,000+ product managers receiving monthly updates on:</p>
+          <ol class="card__label-list">
+            <li class="card__label-item">Product discovery and building what matters</li>
+            <li class="card__label-item">Measuring to ensure updates are a success</li>
+            <li class="card__label-item">And much more!</li>
+          </ol>
+        </div>
+        <form id="form" method="get" class="card__form-group" action="#">
+
+          <div class="card__span-group">
+            <span class="card__span-label">Email address</span>
+            <span id="error" class="card__span-error hidden">Valid email required
+            </span>
+          </div>
+          <input type="email" name="" id="email" placeholder="email@company.com" class="card__input-email">
+
+          <button id="subscribe" class="card__form-btn" type="submit">Subscribe to monthly newsletter</button>
+        </form>
+      </div>
+    </section>
+    <!-- Sign-up form end -->
+
+    <section id="thank" class="card-thank hidden">
+      <div class="card-thank__content-group">
+        <img src="./assets/images/icon-success.svg" alt="" class="card-thank__img">
+        <h1 class="card-thank__title">Thanks for subscribing!</h1>
+        <p class="card-thank__des">A confirmation email has been sent to <strong>ash@loremcompany.com.</strong>
+          Please open it and click the button inside to confirm your subscription.
+        </p>
+        <button id="dismiss" type="submit" class="card-thank__btn">Dismiss message</button>
+      </div>
+    </section>
+
+
+  </main>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Manh Phan</a>.
+  </footer>
+
+
+
+
+
+</body>
+
+</html>

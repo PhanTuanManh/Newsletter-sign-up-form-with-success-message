@@ -1,0 +1,282 @@
+:root {
+    /* Primary */
+    --Tomato: hsl(4, 100%, 67%);
+
+    /* Neutral */
+    --DarkSlateGrey: hsl(234, 29%, 20%);
+    --CharcoalGrey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+
+    /* font-weight */
+    --fw-light: 400;
+    --fw-bold: 700;
+
+    /* font family */
+    --ff: 'Roboto', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+img,
+picture {
+    display: block;
+    max-width: 100%;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+.error-input {
+    opacity: 1 !important;
+    border: 1px solid var(--Tomato) !important;
+}
+
+body {
+    background-color: var(--CharcoalGrey);
+    font-family: var(--ff);
+    color: var(--CharcoalGrey);
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100dvh;
+    flex-direction: column;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    background-color: var(--White);
+    border-radius: 36px;
+    padding: 2.4rem;
+    max-width: 92.8rem;
+    margin: 1.6rem;
+}
+
+.card__img {
+    max-width: initial;
+}
+
+.card__text-group {
+    padding: 0 6.4rem 0 4rem;
+}
+
+.card__label-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+
+}
+
+.card__label-title {
+    font-size: 5.6rem;
+    color: var(--DarkSlateGrey);
+    font-weight: var(--fw-bold);
+}
+
+.card__label-des {
+    font-size: 1.6rem;
+    font-weight: var(--fw-light);
+    line-height: 1.6;
+}
+
+.card__label-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+.card__label-item {
+    display: flex;
+    align-items: center;
+}
+
+.card__label-item::before {
+    content: url('./assets/images/icon-list.svg');
+    padding-right: 1.8rem;
+}
+
+.card__form-group {
+    margin-top: 4.2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.card__span-group {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: var(--fw-bold);
+    line-height: 1.6;
+}
+
+.card__span-label {
+    color: var(--DarkSlateGrey);
+}
+
+.card__span-error {
+    color: var(--Tomato);
+
+}
+
+.card__input-email {
+    margin-top: 0.8rem;
+    border-radius: 8px;
+    border: 1px solid hsla(243, 28%, 13%, 0.25);
+    outline: none;
+    font-size: 1.6rem;
+    color: var(--Grey);
+    opacity: 0.7;
+    padding: 1.7rem 2.4rem;
+    font-weight: var(--fw-light);
+}
+
+.card__input-email:focus {
+    border: 1px solid hsl(235, 18%, 26%);
+    opacity: 1;
+}
+
+button {
+    background-color: var(--DarkSlateGrey);
+    font-size: 1.6rem;
+    line-height: 1.6;
+    font-weight: var(--fw-bold);
+    padding: 1.8rem 0.6rem 1.4rem 0.6rem;
+    width: 100%;
+    color: var(--White);
+    border-radius: 8px;
+    border: none;
+}
+
+button:hover {
+    background-color: var(--Tomato);
+    cursor: pointer;
+    box-shadow: 0 16px 32px 0 rgba(255, 97, 85, 0.5);
+
+}
+
+.card__form-btn {
+    margin-top: 2.7rem;
+}
+
+.card-thank {
+    max-width: 50.4rem;
+    background-color: var(--White);
+    padding: 4.6rem 6rem 6rem 6rem;
+    border-radius: 36px;
+}
+
+.card-thank__title {
+    font-size: 5.6rem;
+    font-weight: var(--fw-bold);
+    margin-top: 4rem;
+    line-height: 1;
+}
+
+.card-thank__des {
+    margin-top: 2.4rem;
+    font-size: 1.6rem;
+    font-weight: var(--fw-light);
+    line-height: 1.6;
+}
+
+.card-thank__btn {
+    margin-top: 4rem;
+}
+
+@media only screen and (max-width: 52.5rem) {
+    .card {
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        max-width: 37.5rem;
+    }
+
+    .card__text-group {
+        padding: 4rem 2.4rem;
+    }
+
+    .card__label-title {
+        font-size: 4rem;
+    }
+
+    .card__form-btn {
+        padding: 1.8rem 0.6rem 1.4rem 0.6rem;
+    }
+
+    .card-thank {
+        max-width: 37.5rem;
+        width: 100%;
+        background-color: var(--White);
+        border-radius: 0;
+        padding: 0;
+    }
+
+    .card-thank__content-group {
+        padding: 14.9rem 2.4rem 3.6rem 2.4rem;
+    }
+
+    .card-thank__title {
+        font-size: 4rem;
+        margin-top: 4rem;
+        font-weight: var(--fw-bold);
+        line-height: 1;
+        color: var(--DarkSlateGrey);
+    }
+
+    .card-thank__des {
+        font-size: 1.6rem;
+        margin-top: 2.4rem;
+        color: var(--DarkSlateGrey);
+        font-weight: var(--fw-light);
+        line-height: 1.6;
+    }
+
+    .card-thank__btn {
+        margin-top: 28rem;
+    }
+}
+
+.attribution {
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 2.4rem 0;
+    color: var(--White);
+}
+
+.attribution a {
+    color: var(--Tomato);
+    font-weight: var(--fw-bold);
+}
